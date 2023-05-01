@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker buildx build --push --platform linux/arm64 \
+  -t zarklord/argon_one_fan:$* .
