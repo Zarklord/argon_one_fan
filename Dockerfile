@@ -1,10 +1,8 @@
 FROM alpine:latest
 
-MAINTAINER Zarklord
-
 RUN apk add i2c-tools mosquitto-clients --no-cache;
 
-COPY --chmod=0755 run.sh /
+COPY --chmod=0755 ./run.sh /run.sh
 
 ENV TEMP_MODE=C \
     MIN_TEMP=55 \
