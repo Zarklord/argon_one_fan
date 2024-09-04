@@ -17,6 +17,6 @@ target "argon_one_fan-local" {
 
 target "argon_one_fan" {
 	inherits = ["argon_one_fan-local", "ci_platforms", "docker-metadata-action"]
-	context = "."
+	context = "argon_one_fan"
 	dockerfile = "Dockerfile"
 }
