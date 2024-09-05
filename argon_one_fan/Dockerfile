@@ -2,7 +2,7 @@ FROM alpine:latest
 
 RUN apk add i2c-tools mosquitto-clients --no-cache;
 
-COPY --chmod=0755 ./run.sh /run.sh
+COPY --chmod=0755 ./entrypoint.sh /entrypoint.sh
 
 ENV TEMP_MODE=C \
     MIN_TEMP=55 \
