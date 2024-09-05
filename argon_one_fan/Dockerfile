@@ -14,4 +14,5 @@ ENV TEMP_MODE=C \
     MQTT_PASSWORD= \
     MQTT_TOPIC=
 
-ENTRYPOINT /run.sh
+ENTRYPOINT ["/entrypoint.sh"]
+CMD [""]
