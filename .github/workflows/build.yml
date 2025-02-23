@@ -113,13 +113,13 @@ jobs:
       
       - name: Build
         id: bake
-        uses: docker/bake-action@v5
+        uses: docker/bake-action@v6
         env:
           SOURCE_DATE_EPOCH: ${{ env.TIMESTAMP }}
         with:
           files: |
             ./docker-bake.hcl
-            /tmp/bake-meta.json
+            cwd:///tmp/bake-meta.json
           targets: ${{ matrix.target }}
           set: |
             *.tags=
